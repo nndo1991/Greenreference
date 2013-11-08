@@ -1,12 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Greenreference</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1, user-scalable=no" />
+  <link href='http://fonts.googleapis.com/css?family=Leckerli+One' rel='stylesheet' type='text/css'>
 </head>
 <body>
+	
+<div class="panels ">
+  <div class="panel panel-left">
+  </div>
+</div>
+
+<div class="panel-content">
+  <div class="navbar">
+    <div class="navbar-inner docs-navbar-inner">
+      <div class="container">
+        <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+        <div class="nav-collapse collapse">
+          <nav id="menu">
+            <ul class="nav docs-navbar-menu">
+              <li class=""><a href="#">Arboles</a></li>
+              <li class=""><a href="#">Flores</a></li>
+              <li class=""><a href="#">Hortalizas</a></li>
+              <li><%= link_to 'Agregar nuevo', new_species_path %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <%= yield %>
 

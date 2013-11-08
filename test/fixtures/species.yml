@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  image: MyText
+  sci_name: MyString
+  name: MyString
+  family: MyString
+  origin: MyText
+  size: MyText
+  properties: MyText
+  info: MyText
+
+two:
+  image: MyText
+  sci_name: MyString
+  name: MyString
+  family: MyString
+  origin: MyText
+  size: MyText
+  properties: MyText
+  info: MyText

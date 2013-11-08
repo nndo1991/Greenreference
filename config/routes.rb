@@ -13,6 +13,14 @@ Greenreference::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
+  root to: "interiors#index"
+  resources :species do
+    collection do
+      post :trees
+      post :flowers
+      post :vegetables
+    end
+  end
   # Sample resource route with options:
   #   resources :products do
   #     member do
