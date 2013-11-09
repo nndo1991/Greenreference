@@ -19,6 +19,10 @@ end
 
 gem 'jquery-rails'
 gem 'furatto'
+gem 'rmagick'
+gem 'carrierwave'
+gem 'fog'
+gem 'unf'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

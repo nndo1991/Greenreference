@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131108040912) do
+ActiveRecord::Schema.define(:version => 20131109171759) do
 
   create_table "species", :force => true do |t|
     t.text     "image"
@@ -22,9 +22,9 @@ ActiveRecord::Schema.define(:version => 20131108040912) do
     t.text     "size"
     t.text     "properties"
     t.text     "info"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "type"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "specie_type"
   end
 
 end

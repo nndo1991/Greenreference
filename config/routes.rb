@@ -16,9 +16,9 @@ Greenreference::Application.routes.draw do
   root to: "interiors#index"
   resources :species do
     collection do
-      post :trees
-      post :flowers
-      post :vegetables
+      get :trees
+      get :flowers
+      get :vegetables
     end
   end
   # Sample resource route with options:

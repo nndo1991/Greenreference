@@ -1,0 +1,73 @@
+<% if notice.present? %>
+        <div class="alert alert-success"><%= notice %></div>
+    <% end %>
+    <% if @specie.errors.any? %>
+        <div id="form_errors">
+            <div class="alert alert-danger">
+                Por favor corrige lo siguiente para poder enviar tu mensaje:
+            <ul>
+                <% @specie.errors.each_with_index do |msg, i| %>
+                    <li><%= msg[1] %></li>
+                <% end %>
+            </ul>
+            </div>
+        </div>
+    <% end %>
+
+<%= form_for @specie, :url => {:action => "create"} do |f| %>
+
+        <div class="well image">
+            <div class="control-group">
+                <%= f.label :image, "Imagen*:" %>
+                <%= f.file_field :image %>
+            </div>
+        </div>
+
+        <div class="control-group">
+        <%= f.label :specie_type, "Tipo:*" %>
+        <%= f.select(:specie_type, 
+            Specie::SPECIE_TYPES,
+            prompt: "Selecciona un tipo") %>
+        </div>
+
+        <div class="control-group">
+            <%= f.label :name, "Nombre:*" %>
+            <%= f.text_field :name, class: "span5" %>
+        </div>
+
+        <div class="control-group">
+            <%= f.label :sci_name, "Nombre Científico:" %>
+            <%= f.text_field :sci_name, class: "span5" %>
+        </div>
+
+        <div class="control-group">
+            <%= f.label :family, "Familia:" %>
+            <%= f.text_field :family, class: "span5" %>
+        </div>
+
+        <div class="control-group">
+        <%= f.label :origin, "Origen:" %>
+        <%= f.text_area :origin, class: "span5", rows: 7, cols: 30 %>
+        </div> 
+
+        <div class="control-group">
+        <%= f.label :size, "Tamaño:" %>
+        <%= f.text_area :size, class: "span5", rows: 7, cols: 30 %>
+        </div> 
+
+        <div class="control-group">
+        <%= f.label :properties, "Propiedades:" %>
+        <%= f.text_area :properties, class: "span5", rows: 7, cols: 30 %>
+        </div> 
+
+        <div class="control-group">
+        <%= f.label :info, "Información adicional:" %>
+        <%= f.text_area :info, class: "span5", rows: 7, cols: 30 %>
+        </div> 
+
+        
+        <div class="form-actions">
+            <%= f.submit value: "Guardar", class: "btn btn-primary" %>
+        </div>
+
+<% end %>
