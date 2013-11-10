@@ -1,0 +1,24 @@
+<h3 style="text-align:center;" class="banner">Flores</h3>
+<br>
+<table class="table">
+	<tr>
+		<th class="imgs">Imagen</th>
+		<th>Nombre</th>
+		<th>Info</th>
+	</tr>
+<% @species.each do |specie| %>
+	<tr>
+		<td>
+			<% if specie.image? %>
+				<%= image_tag specie.image_url(:thumb), class: "img img-circular" %>
+			<% end %>
+		</td>
+		<td>
+			<p class="table"><%= specie.name %><br></p>		
+		</td>
+		<td>
+			<p class="table"><%= link_to '>', species_path(specie)%></p>
+		</td>
+	</tr>	
+<% end %>	
+</table>

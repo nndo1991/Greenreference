@@ -1,4 +1,4 @@
-<h3>Arboles</h3>
+<h3 style="text-align:center;" class="banner">Árboles</h3>
 <br>
 <table class="table">
 	<tr>
@@ -14,10 +14,10 @@
 			<% end %>
 		</td>
 		<td>
-			<p><%= specie.name %><br></p>		
+			<p class="table"><%= specie.name %><br></p>		
 		</td>
 		<td>
-			<p>></p>
+			<p class="table"><%= link_to '>', species_path(specie)%></p>
 		</td>
 	</tr>	
 <% end %>	

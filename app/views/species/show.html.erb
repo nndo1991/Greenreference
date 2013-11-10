@@ -1,0 +1,79 @@
+<% if @specie.specie_type == 'Arbol' %>
+	<%= link_to 'Regresar', trees_species_index_path %>
+<% else %>
+	<%= link_to 'Regresar', root_path %>
+<% end %>
+
+<div class="foto">
+	<%= image_tag @specie.image_url %>
+</div>
+
+
+<div class="info">
+	<b>Nombre: </b>
+</div>
+<div class="data">
+	<%= @specie.name %>
+</div>
+<br/><br/>
+
+
+<% if !@specie.sci_name.empty? %>
+	<div class="info">
+	<b>N. Científico: </b>
+	</div>
+	<div class="data">
+		<%= @specie.sci_name %>
+	</div>
+	<br/><br/>
+<% end %>
+
+<% if !@specie.family.empty? %>
+	<div class="info">
+	<b>Familia: </b>
+	</div>
+	<div class="data">
+		<%= @specie.family %>
+	</div>
+	<br/><br/>
+<% end %>
+
+<% if !@specie.origin.empty? %>
+	<div class="info">
+	<b>Origen: </b>
+	</div>
+	<div class="data">
+		<%= @specie.origin %>
+	</div>
+	<br/><br/>
+<% end %>
+
+<% if !@specie.size.empty? %>
+	<div class="info">
+	<b>Tamaño: </b>
+	</div>
+	<div class="data">
+		<%= @specie.size %>
+	</div>
+	<br/><br/>
+<% end %>
+
+<% if !@specie.properties.empty? %>
+	<div class="info">
+	<b>Propiedades: </b>
+	</div>
+	<div class="data">
+		<%= @specie.properties %>
+	</div>
+	<br/><br/>
+<% end %>
+
+<% if !@specie.info.empty? %>
+	<div class="info">
+	<b>I. Adicional: </b>
+	</div>
+	<div class="data">
+		<%= @specie.info %>
+	</div>
+	<br/><br/>
+<% end %>

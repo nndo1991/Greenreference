@@ -13,15 +13,19 @@ class SpeciesController < ApplicationController
 		end
 	end
 
+	def show
+		@specie = Specie.find(params[:id])
+	end
+
 	def trees
 		@species = Specie.where(specie_type: 'Arbol')
 	end
 
 	def flowers
-
+		@species = Specie.where(specie_type: 'Flor')
 	end
 
 	def vegetables
-
+		@species = Specie.where(specie_type: 'Hortaliza')
 	end
 end
