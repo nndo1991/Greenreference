@@ -18,14 +18,14 @@ class SpeciesController < ApplicationController
 	end
 
 	def trees
-		@species = Specie.where(specie_type: 'Arbol')
+		@species = Specie.where(specie_type: 'Arbol').order('name asc')
 	end
 
 	def flowers
-		@species = Specie.where(specie_type: 'Flor')
+		@species = Specie.where(specie_type: 'Flor').order('name asc')
 	end
 
 	def vegetables
-		@species = Specie.where(specie_type: 'Hortaliza')
+		@species = Specie.where(specie_type: 'Hortaliza').order('name asc')
 	end
 end
